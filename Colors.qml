@@ -24,13 +24,25 @@ Item {
 
     Gradient {
         id: invertedGreyBorder
-        GradientStop { position: 0.0; color: currentTheme.cardColor }
-        GradientStop { position: 1.0; color: currentTheme.borderColor }
+        GradientStop {
+            position: 0.0
+            color: currentTheme.cardColor
+        }
+        GradientStop {
+            position: 1.0
+            color: currentTheme.borderColor
+        }
     }
     Gradient {
         id: greyBorder
-        GradientStop { position: 0.0; color: currentTheme.borderColor }
-        GradientStop { position: 1.0; color: currentTheme.cardColor }
+        GradientStop {
+            position: 0.0
+            color: currentTheme.borderColor
+        }
+        GradientStop {
+            position: 1.0
+            color: currentTheme.cardColor
+        }
     }
     Gradient {
         id: invertedGreenBorder
@@ -89,7 +101,7 @@ Item {
     Gradient {
         id: darkButtonGradient
         GradientStop {
-           position: 0.2
+            position: 0.2
             color: Colors.currentTheme.background
         }
         GradientStop {
@@ -104,7 +116,7 @@ Item {
     Gradient {
         id: lightButtonGradient
         GradientStop {
-           position: 0.2
+            position: 0.2
             color: Colors.currentTheme.background
         }
         GradientStop {

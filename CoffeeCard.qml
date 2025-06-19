@@ -31,8 +31,7 @@ CoffeeCardForm {
 
     innerCoffeeCardRectangle.states: State {
         name: "small"
-        when: ((Screen.height * Screen.devicePixelRatio)
-               + (Screen.width * Screen.devicePixelRatio)) < 3200
+        when: ((Screen.height * Screen.devicePixelRatio) + (Screen.width * Screen.devicePixelRatio)) < 3200
         PropertyChanges {
             target: coffeeText
             font.pixelSize: 14

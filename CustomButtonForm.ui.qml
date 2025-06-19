@@ -40,8 +40,7 @@ AbstractButton {
             anchors.verticalCenter: parent.verticalCenter
             Text {
                 text: buttonText
-                color: (buttonColor
-                        == "green") ? Colors.dark.textColor : Colors.currentTheme.textColor
+                color: (buttonColor == "green") ? Colors.dark.textColor : Colors.currentTheme.textColor
                 font.pixelSize: 18
                 font.weight: 700
                 rightPadding: 8

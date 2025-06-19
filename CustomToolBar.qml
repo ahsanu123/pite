@@ -21,5 +21,4 @@ CustomToolBarForm {
             scale: 1.1
         }
     }
-
 }

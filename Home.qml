@@ -6,8 +6,7 @@ HomeForm {
     grid.states: [
         State {
             name: "small"
-            when: ((Screen.height * Screen.devicePixelRatio)
-                   + (Screen.width * Screen.devicePixelRatio)) < 2000
+            when: ((Screen.height * Screen.devicePixelRatio) + (Screen.width * Screen.devicePixelRatio)) < 2000
             PropertyChanges {
                 target: header
                 font.pixelSize: 28

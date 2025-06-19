@@ -6,8 +6,7 @@ SettingsForm {
     rectangle.states: [
         State {
             name: "smallerFont"
-            when: ((Screen.height * Screen.devicePixelRatio)
-                   + (Screen.width * Screen.devicePixelRatio)) < 2000
+            when: ((Screen.height * Screen.devicePixelRatio) + (Screen.width * Screen.devicePixelRatio)) < 2000
             PropertyChanges {
                 target: rectangle
                 textPixelSize: 14
@@ -25,9 +24,7 @@ SettingsForm {
     handle.states: [
         State {
             name: "small"
-            when: ((Screen.height * Screen.devicePixelRatio)
-                   + (Screen.width
-                      * Screen.devicePixelRatio)) < 2000
+            when: ((Screen.height * Screen.devicePixelRatio) + (Screen.width * Screen.devicePixelRatio)) < 2000
             PropertyChanges {
                 target: handle
                 width: 10
@@ -37,9 +34,7 @@ SettingsForm {
     box.states: [
         State {
             name: "small"
-            when: ((Screen.height * Screen.devicePixelRatio)
-                   + (Screen.width
-                      * Screen.devicePixelRatio)) < 2000
+            when: ((Screen.height * Screen.devicePixelRatio) + (Screen.width * Screen.devicePixelRatio)) < 2000
             PropertyChanges {
                 target: box
                 implicitWidth: sugarText.width + 4
@@ -58,21 +53,21 @@ SettingsForm {
         }
     ]
     sugarSlider.onMoved: {
-        sugarText.sugarAmount = sugarSlider.position * 4
+        sugarText.sugarAmount = sugarSlider.position * 4;
     }
     confirmButton.onClicked: applicationFlow.confirmButton()
     //! [Value changed]
     coffeeSlider.onValueChanged: {
-        applicationFlow.coffeeAmount = coffeeSlider.value
+        applicationFlow.coffeeAmount = coffeeSlider.value;
     }
     //! [Value changed]
     milkSlider.onValueChanged: {
-        applicationFlow.milkAmount = milkSlider.value
+        applicationFlow.milkAmount = milkSlider.value;
     }
     foamSlider.onValueChanged: {
-        applicationFlow.foamAmount = foamSlider.value
+        applicationFlow.foamAmount = foamSlider.value;
     }
     sugarSlider.onValueChanged: {
-        applicationFlow.sugarAmount = sugarSlider.value
+        applicationFlow.sugarAmount = sugarSlider.value;
     }
 }

@@ -2,13 +2,14 @@
 // SPDX-License-Identifier: LicenseRef-Qt-Commercial OR BSD-3-Clause
 import QtQuick
 import QtQuick.Controls.Basic
+
 //! [Set application window size]
 ApplicationWindow {
     visible: true
     width: 1000
     height: 600
     title: qsTr("Coffee")
-//! [Set application window size]
+    //! [Set application window size]
     ApplicationFlow {
         width: parent.width
         height: parent.height

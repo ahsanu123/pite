@@ -13,7 +13,7 @@ ProgressForm {
         interval: brewTime
         running: true
         onTriggered: {
-            applicationFlow.onFinished()
+            applicationFlow.onFinished();
         }
     }
     //! [Timer]
@@ -92,8 +92,7 @@ ProgressForm {
     caption.states: [
         State {
             name: "small"
-            when: ((Screen.height * Screen.devicePixelRatio)
-                   + (Screen.width * Screen.devicePixelRatio)) < 2000
+            when: ((Screen.height * Screen.devicePixelRatio) + (Screen.width * Screen.devicePixelRatio)) < 2000
             PropertyChanges {
                 target: caption
                 font.pixelSize: 16

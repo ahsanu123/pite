@@ -10,14 +10,13 @@ ReadyForm {
         interval: 3000
         running: true
         onTriggered: {
-            applicationFlow.onReturnToStart()
+            applicationFlow.onReturnToStart();
         }
     }
     grid.states: [
         State {
             name: "small"
-            when: ((Screen.height * Screen.devicePixelRatio)
-                   + (Screen.width * Screen.devicePixelRatio)) < 2000
+            when: ((Screen.height * Screen.devicePixelRatio) + (Screen.width * Screen.devicePixelRatio)) < 2000
             PropertyChanges {
                 target: grid
                 rowSpacing: 10
@@ -27,8 +26,7 @@ ReadyForm {
     caption.states: [
         State {
             name: "small"
-            when: ((Screen.height * Screen.devicePixelRatio)
-                   + (Screen.width * Screen.devicePixelRatio)) < 2000
+            when: ((Screen.height * Screen.devicePixelRatio) + (Screen.width * Screen.devicePixelRatio)) < 2000
             PropertyChanges {
                 target: caption
                 font.pixelSize: 16

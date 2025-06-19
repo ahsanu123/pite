@@ -6,11 +6,11 @@ import QtQuick.Controls.Basic
 import QtQuick.Effects
 
 Item {
+    id: root
     // Height, width and any other size related properties containing odd looking float or other dividers, multipliers, etc.
     // that do not seem to have any logical origin are just arbitrary and based on original design
     // and/or personal preference on what looks nice.
     property string coffeeName: ""
-    id: root
     property alias confirmButton: confirmButton
     property alias rectangle: rectangle
     property alias coffeeSlider: coffeeSlider
@@ -273,8 +273,7 @@ Item {
                                         anchors.left: firstBar.right
                                         width: parent.width / 4
                                         height: parent.height
-                                        color: (sugarSlider.value
-                                                > 0.25) ? Colors.green : Colors.grey
+                                        color: (sugarSlider.value > 0.25) ? Colors.green : Colors.grey
                                         radius: 2
                                     }
 
@@ -283,8 +282,7 @@ Item {
                                         anchors.left: secondBar.right
                                         width: parent.width / 4
                                         height: parent.height
-                                        color: (sugarSlider.value
-                                                > 0.50) ? Colors.green : Colors.grey
+                                        color: (sugarSlider.value > 0.50) ? Colors.green : Colors.grey
                                         radius: 2
                                     }
 
@@ -293,15 +291,13 @@ Item {
                                         anchors.right: parent.right
                                         width: parent.width / 4
                                         height: parent.height
-                                        color: (sugarSlider.value
-                                                > 0.75) ? Colors.green : Colors.grey
+                                        color: (sugarSlider.value > 0.75) ? Colors.green : Colors.grey
                                         radius: 2
                                     }
                                 }
                                 handle: Rectangle {
                                     id: handle
-                                    x: sugarSlider.leftPadding + sugarSlider.visualPosition
-                                       * (sugarSlider.availableWidth - width)
+                                    x: sugarSlider.leftPadding + sugarSlider.visualPosition * (sugarSlider.availableWidth - width)
                                     anchors.verticalCenter: parent.verticalCenter
                                     width: 14
                                     height: width

@@ -33,8 +33,7 @@ Column {
             when: applicationFlow.mode == "portrait"
             PropertyChanges {
                 target: coffeeCardRectangle
-                implicitHeight: (applicationFlow.stack.height / 2) - 20
-                                - (coffeeCardCircle.height / 2)
+                implicitHeight: (applicationFlow.stack.height / 2) - 20 - (coffeeCardCircle.height / 2)
                 implicitWidth: applicationFlow.width / 2.4
             }
         },
@@ -55,11 +54,11 @@ Column {
         gradient: Colors.invertedGreyBorder
         //! [AbstractButton]
         AbstractButton {
+            id: button
             width: parent.width - 2
             height: parent.height - 2
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.verticalCenter: parent.verticalCenter
-            id: button
             hoverEnabled: true
             checkable: true
             enabled: (cupsLeft != 0) ? true : false
@@ -142,8 +141,7 @@ Column {
                     height: coffeeCardRectangle.height / 5
                     visible: (cupsLeft != 0) ? false : true
                     radius: 8
-                    color: (Colors.currentTheme
-                            == Colors.dark) ? Colors.light.cardColor : Colors.dark.cardColor
+                    color: (Colors.currentTheme == Colors.dark) ? Colors.light.cardColor : Colors.dark.cardColor
                     rotation: 180
                     anchors.horizontalCenter: parent.horizontalCenter
                     anchors.verticalCenter: parent.verticalCenter
@@ -151,8 +149,7 @@ Column {
                         anchors.horizontalCenter: parent.horizontalCenter
                         anchors.verticalCenter: parent.verticalCenter
                         text: "Out of " + coffeeName
-                        color: (Colors.currentTheme
-                                == Colors.dark) ? Colors.light.textColor : Colors.dark.textColor
+                        color: (Colors.currentTheme == Colors.dark) ? Colors.light.textColor : Colors.dark.textColor
                     }
                 }
             }
